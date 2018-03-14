@@ -1,0 +1,117 @@
+/* PRINCIPAL */
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body {
+  background:#f3f4f5;
+  font-family: 'Lato', sans-serif;
+  color:#797979;
+  font-size:1rem;
+  line-height:1.5;
+  padding:48px 0;
+}
+
+main {
+  background:#fff;
+  width:100%;
+  max-width:1200px;
+  margin:0 auto;
+  padding:32px 0;
+  border-radius:4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+
+/* FORM */
+form {
+  padding:4px 12px;
+  display:flex;
+}
+
+form > div {
+  flex: 2;
+  padding: 0 8px;
+  align-self: flex-end;
+}
+
+form > div:last-of-type { flex:1; }
+
+form input {
+  border-radius:4px;
+  background:fff;
+  border:#DBDFE1 1px solid;
+  height:36px;
+  line-height:36px;
+  padding:0 16px;
+  font-size:1rem;
+  display:block;
+  width:100%;
+  outline:0;
+  transition:all .1s;
+  color:#6B7174;
+}
+
+form input:hover {
+  border-color:#C4C9CD;
+}
+
+form input:focus {
+  border-color:#2D2E2F;
+  color:#2D2E2F;
+}
+
+form button {
+  display:block;
+  height:36px;
+  line-height:36px;
+  color:#fff;
+  background:#EF3340;
+  padding:0 16px;
+  font-size:1rem;
+  border:0;
+  outline:0;
+  border-radius:4px;
+  transition:all .3s;
+}
+
+form button:hover {
+  background:#2D2E2F;
+  cursor:pointer;
+}
+
+/* TABLA */
+
+#resultado {
+  margin-bottom:32px;
+}
+
+#resultado div {
+  display:flex;
+  height:64px;
+  line-height:64px;
+  padding:12px;
+}
+#resultado div > div { flex: 1; justify-content:center; }
+#resultado div > div:last-child { flex: 2; overflow:hidden;  justify-content:flex-start;}
+
+#resultado div:first-of-type > * {
+  font-size:1.2rem;
+  font-weight:700;
+  border-bottom:#EF3340 2px solid;
+  padding-bottom:8px;
+}
+
+#resultado div span:first-of-type { min-width:64px; }
+
+#resultado div .result {
+  min-width:1px;
+  height:16px;
+  background:#D8D8D8;
+  margin-top:24px;
+  margin-left:24px;
+}
