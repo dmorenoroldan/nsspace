@@ -1,3 +1,21 @@
+/* ============ COPIAR AL PORTAPAPELES ============ */
+var clip = new Clipboard('.copy');
+clip.on('success', function(e) {
+  nativeToast({
+    message: '¡Copiado!',
+    timeout: 5000,
+    position: 'south'
+  })
+});
+
+clip.on('error', function(e) {
+  nativeToast({
+    message: 'Error, inténtalo de nuevo',
+    timeout: 5000,
+    position: 'south'
+  })
+});
+
 /* ============ REDONDEAR 3 DECIMALES ============ */
 function roundTo(num) {
   return +(Math.round(num + "e+3")  + "e-3");
@@ -34,7 +52,7 @@ function addFila(name,space,rem) {
   var _valorfont = $("#fontsize").val();
   var fontsize = parseInt(_valorfont);
   var pixel = fontsize*rem;
-  $("#resultado").append("<div><div>"+name+"</div><div>"+roundTo(space)+"</div><div>"+roundTo(rem)+"</div><div><span>"+roundTo(pixel)+"px</span> <span class='result' style='width:"+pixel+"px'></span></div></div>");
+  $("#resultado").append("<div><div><a class='copy' data-clipboard-text='"+name+"'>"+name+"</a></div><div><a class='copy' data-clipboard-text='"+roundTo(space)+"'>"+roundTo(space)+"</a></div><div><a class='copy' data-clipboard-text='"+roundTo(rem)+"'>"+roundTo(rem)+"</a></div><div><span><a class='copy' data-clipboard-text='"+roundTo(pixel)+"'>"+roundTo(pixel)+"px</a></span> <span class='result' style='width:"+pixel+"px'></span></div></div>");
 }
 
 
