@@ -52,7 +52,7 @@ function addFila(name,space,rem) {
   var _valorfont = $("#fontsize").val();
   var fontsize = parseInt(_valorfont);
   var pixel = fontsize*rem;
-  $("#resultado").append("<div><div><a class='copy' data-clipboard-text='"+name+"'>"+name+"</a></div><div><a class='copy' data-clipboard-text='"+roundTo(space)+"'>"+roundTo(space)+"</a></div><div><a class='copy' data-clipboard-text='"+roundTo(rem)+"'>"+roundTo(rem)+"</a></div><div><span><a class='copy' data-clipboard-text='"+roundTo(pixel)+"'>"+roundTo(pixel)+"px</a></span> <span class='result' style='width:"+pixel+"px'></span></div></div>");
+  $("#resultado").append("<div><div><a class='copy' data-clipboard-text='"+name+"'>"+name+"</a></div><div><a class='copy' data-clipboard-text='"+roundTo(space)+"'>"+roundTo(space)+"</a></div><div><a class='copy' data-clipboard-text='"+roundTo(rem)+"'>"+roundTo(rem)+"</a></div><div><a class='copy' data-clipboard-text='"+roundTo(pixel)+"'>"+roundTo(pixel)+"px</a></div><div> <span class='result' style='width:"+pixel+"px'></span></div></div>");
 }
 
 
@@ -76,7 +76,7 @@ $('#calc').click(function() {
     var baseRem = lineheight/fontsize;
 
     $("#resultado").remove();
-    $("#form").after("<div id='resultado'><div><div>Math</div><div>Space</div><div>Rem</div><div>Resultado</div></div></div>");
+    $("#form").after("<div id='resultado'><div><div>Math</div><div>Space</div><div>Rem</div><div>Pixel</div><div>Resultado</div></div></div>");
 
     addValor("d6",6,1,baseRem);
     addValor("d5",5,1,baseRem);
